@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c6tpeks5j66ll" path="res://assets/saul.jpg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://dp7cf3lq68nrb" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://5j0qifl4lb04" path="res://scenes/inventory_component.gd" id="3_qhqgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aoqgt"]
 radius = 196.91876
@@ -22,3 +23,8 @@ polygon = PackedVector2Array(-640, -360, -640, 360, 640, 360, 640, -360)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=544037669]
 shape = SubResource("CircleShape2D_aoqgt")
+
+[node name="InventoryComponent" type="Node" parent="." unique_id=504499433]
+script = ExtResource("3_qhqgy")
+
+[connection signal="inventory_updated" from="InventoryComponent" to="." method="_on_inventory_updated"]
