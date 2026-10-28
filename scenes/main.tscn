@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://nae7sx8hnx67"]
 
 [ext_resource type="Script" uid="uid://c5yxy06lfrqys" path="res://scenes/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://cedeqdv61442g" path="res://scenes/inventory_slot.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cc0a52sqpa3c6" path="res://scenes/player.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://clhb2qj5qq5q6" path="res://scenes/inventory_slots.gd" id="3_tbgi4"]
 
 [node name="Main" type="Node2D" unique_id=169573998]
 script = ExtResource("1_0wfyh")
@@ -13,5 +15,33 @@ position = Vector2(302, 292)
 
 [node name="ItemTimer" type="Timer" parent="." unique_id=417028422]
 autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=752751869]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1969215662]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 20
+
+[node name="InventorySlots" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=1912759516]
+layout_mode = 2
+script = ExtResource("3_tbgi4")
+
+[node name="InventorySlot" parent="CanvasLayer/MarginContainer/InventorySlots" unique_id=1906807441 instance=ExtResource("3_jyhfs")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="CanvasLayer/MarginContainer/InventorySlots" unique_id=667590076 instance=ExtResource("3_jyhfs")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="CanvasLayer/MarginContainer/InventorySlots" unique_id=1603539197 instance=ExtResource("3_jyhfs")]
+layout_mode = 2
 
 [connection signal="timeout" from="ItemTimer" to="." method="_on_item_timer_timeout"]

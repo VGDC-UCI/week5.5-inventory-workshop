@@ -24,4 +24,4 @@ func _input(event: InputEvent) -> void:
 
 
 func _on_inventory_updated() -> void:
-	print("Inventory updated.")
+	Events.inventory_updated.emit(inventory_component.inventory)

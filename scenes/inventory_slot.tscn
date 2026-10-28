@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cedeqdv61442g"]
+
+[ext_resource type="Script" uid="uid://ccgya86edvyvm" path="res://scenes/inventory_slot.gd" id="1_bxqf6"]
+[ext_resource type="Texture2D" uid="uid://c6tpeks5j66ll" path="res://assets/saul.jpg" id="1_dxvxp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxqf6"]
+bg_color = Color(0.9231732, 0.9231732, 0.9231732, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.92, 0.55016005, 0.30359998, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="InventorySlot" type="Control" unique_id=1906807441]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 128.0
+offset_bottom = 128.0
+script = ExtResource("1_bxqf6")
+
+[node name="Panel" type="Panel" parent="." unique_id=956919765]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bxqf6")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=412712044]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Sprite" type="TextureRect" parent="MarginContainer" unique_id=1952192775]
+layout_mode = 2
+texture = ExtResource("1_dxvxp")
+expand_mode = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1417450677]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_constants/margin_right = 10
+
+[node name="StackAmount" type="Label" parent="MarginContainer2" unique_id=2058909809]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.54509807)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "x0"
+horizontal_alignment = 2
