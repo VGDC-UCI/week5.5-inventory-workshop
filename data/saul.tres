@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ekovj0a5dmlb"]
+
+[ext_resource type="Script" uid="uid://bvrrayl1rg21r" path="res://data/item_data.gd" id="1_v3myw"]
+[ext_resource type="Texture2D" uid="uid://c6tpeks5j66ll" path="res://assets/saul.jpg" id="2_v3myw"]
+
+[resource]
+script = ExtResource("1_v3myw")
+name = "Saul"
+texture = ExtResource("2_v3myw")
+max_stack = 100
+metadata/_custom_type_script = "uid://bvrrayl1rg21r"

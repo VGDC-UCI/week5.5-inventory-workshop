@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c2av4i51uc2f2"]
+
+[ext_resource type="Texture2D" uid="uid://cwvc78otg6vpj" path="res://assets/banana_bread.jpg" id="1_4gq7n"]
+[ext_resource type="Script" uid="uid://bfb2jkrxmwrr" path="res://scenes/item.gd" id="1_s8enn"]
+[ext_resource type="Resource" uid="uid://di7krerlp6ks" path="res://data/banana_bread.tres" id="2_6muww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoqgt"]
+size = Vector2(268, 232)
+
+[node name="Item" type="Area2D" unique_id=1527539979]
+script = ExtResource("1_s8enn")
+data = ExtResource("2_6muww")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2103915285]
+scale = Vector2(0.3508772, 0.1497076)
+texture = ExtResource("1_4gq7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=96628228]
+shape = SubResource("RectangleShape2D_aoqgt")

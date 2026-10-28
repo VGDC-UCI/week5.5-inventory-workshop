@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cc0a52sqpa3c6"]
+
+[ext_resource type="Texture2D" uid="uid://c6tpeks5j66ll" path="res://assets/saul.jpg" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://dp7cf3lq68nrb" path="res://scenes/player.gd" id="1_g2els"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aoqgt"]
+radius = 196.91876
+
+[node name="Player" type="CharacterBody2D" unique_id=1086121419]
+script = ExtResource("1_g2els")
+
+[node name="Saul" type="Sprite2D" parent="." unique_id=149210271]
+modulate = Color(0.3106229, 0.5199722, 1, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_3vyb7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=946538529]
+scale = Vector2(0.25, 0.25)
+polygon = PackedVector2Array(-640, -360, -640, 360, 640, 360, 640, -360)
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=100758048]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=544037669]
+shape = SubResource("CircleShape2D_aoqgt")

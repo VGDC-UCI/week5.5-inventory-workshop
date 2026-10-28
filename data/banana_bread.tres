@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://di7krerlp6ks"]
+
+[ext_resource type="Script" uid="uid://bvrrayl1rg21r" path="res://data/item_data.gd" id="1_1q468"]
+[ext_resource type="Texture2D" uid="uid://cwvc78otg6vpj" path="res://assets/banana_bread.jpg" id="2_a025y"]
+
+[resource]
+script = ExtResource("1_1q468")
+name = "Banana Bread"
+description = "this is a banana bread"
+texture = ExtResource("2_a025y")
+max_stack = 100
+metadata/_custom_type_script = "uid://bvrrayl1rg21r"
